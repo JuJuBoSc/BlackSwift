@@ -12,6 +12,7 @@
 		3D1838A71AB1FB0300F59FBA /* BlackSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1838A61AB1FB0300F59FBA /* BlackSwiftTests.swift */; };
 		3D1838B11AB1FCC400F59FBA /* BsProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1838B01AB1FCC400F59FBA /* BsProcess.swift */; };
 		3D1838B31AB1FD6B00F59FBA /* BsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1838B21AB1FD6B00F59FBA /* BsHelper.swift */; };
+		3D1839301AB217AF00F59FBA /* BsMemoryBasicInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D18392F1AB217AF00F59FBA /* BsMemoryBasicInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +34,7 @@
 		3D1838A61AB1FB0300F59FBA /* BlackSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackSwiftTests.swift; sourceTree = "<group>"; };
 		3D1838B01AB1FCC400F59FBA /* BsProcess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BsProcess.swift; sourceTree = "<group>"; };
 		3D1838B21AB1FD6B00F59FBA /* BsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BsHelper.swift; sourceTree = "<group>"; };
+		3D18392F1AB217AF00F59FBA /* BsMemoryBasicInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BsMemoryBasicInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				3D1838971AB1FB0200F59FBA /* Supporting Files */,
 				3D1838B01AB1FCC400F59FBA /* BsProcess.swift */,
 				3D1838B21AB1FD6B00F59FBA /* BsHelper.swift */,
+				3D18392F1AB217AF00F59FBA /* BsMemoryBasicInfo.swift */,
 			);
 			path = BlackSwift;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D1839301AB217AF00F59FBA /* BsMemoryBasicInfo.swift in Sources */,
 				3D1838B31AB1FD6B00F59FBA /* BsHelper.swift in Sources */,
 				3D1838B11AB1FCC400F59FBA /* BsProcess.swift in Sources */,
 			);
@@ -413,6 +417,7 @@
 				3D1838AC1AB1FB0300F59FBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D1838AD1AB1FB0300F59FBA /* Build configuration list for PBXNativeTarget "BlackSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				3D1838AF1AB1FB0300F59FBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
