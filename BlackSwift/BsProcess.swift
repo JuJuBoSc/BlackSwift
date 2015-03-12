@@ -45,11 +45,10 @@ public class BsProcess {
         _task = mach_port_name_t(MACH_PORT_NULL)
     }
     
-    public func ReadBytes(address:UInt, count:Int) -> [UInt8]
-    {
+    public func ReadBytes(address:UInt, count:Int) -> [UInt8] {
         
-        var result = [UInt8](count: count, repeatedValue: 0)
-        var pResult = UnsafeMutablePointer<UInt8>(result)
+        let result = [UInt8](count: count, repeatedValue: 0)
+        let pResult = UnsafeMutablePointer<UInt8>(result)
         var outsize: vm_size_t = 0
         
         if (vm_read_overwrite(_task, address, vm_size_t(count), unsafeBitCast(pResult, vm_address_t.self), &outsize) != KERN_SUCCESS)
@@ -59,6 +58,24 @@ public class BsProcess {
             #endif
         }
         
+        return result
+        
+    }
+    
+    public func Read<T>(address:UInt) -> T {
+        
+        let pResult = UnsafeMutablePointer<T>.alloc(1)
+        var outsize: vm_size_t = 0
+        
+        if (vm_read_overwrite(_task, address, vm_size_t(sizeof(T.Type)), unsafeBitCast(pResult, vm_address_t.self), &outsize) != KERN_SUCCESS)
+        {
+            #if DEBUG
+                println("BsProcess.Read failed at 0x" + String(address, radix: 16, uppercase: true))
+            #endif
+        }
+        
+        let result =  pResult.move()
+        pResult.dealloc(1)
         return result
         
     }
